@@ -1,5 +1,7 @@
 #!/bin/ruby
 
+# Link
+# https://www.hackerrank.com/challenges/saveprincess
 def displayPathToPrincess(n, grid)
   grid = Grid.new(n, grid) 
 
@@ -15,6 +17,7 @@ end
 
 class Grid
   attr_reader :n, :matrix, :princess_coord, :bot_coord
+  
   def initialize(n, grid)
     @n = n
     @matrix = grid
@@ -93,7 +96,6 @@ class Grid
 
 end
 
-
 m = gets.to_i
 
 grid = Array.new(m)
@@ -101,6 +103,5 @@ grid = Array.new(m)
 (0...m).each do |i|
   grid[i] = gets.strip
 end
-
 
 displayPathToPrincess(m, grid)
